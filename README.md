@@ -1,3 +1,3 @@
 # UMG
 
-The Code and Password of the datasets will be released.
+The Code and datasets will be released once the paper is accepted.
