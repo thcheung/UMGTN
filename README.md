@@ -11,3 +11,18 @@ Full datasets can be downloaded below. Password will be provided once the paper 
 - [Weibo-16 Dataset](https://connectpolyu-my.sharepoint.com/:u:/g/personal/15083269d_connect_polyu_hk/EU5duP8NOKtOlvHmpCLp0dEB06TYkwWfhUUyyMEvkFQN1A?e=P8bNqP)
 
 - [Weibo-17 Dataset](https://connectpolyu-my.sharepoint.com/:u:/g/personal/15083269d_connect_polyu_hk/EQfnvtPJPU9DmmyRp1UST8UBjK-MolS9mx2DevZJ8vgoEg?e=SXCxQJ)
+
+## Citation
+
+Please cite our work if you found this project useful.
+
+```
+@misc{cheung2023unifying,
+      title={Unifying Multimodal Source and Propagation Graph for Rumour Detection on Social Media with Missing Features}, 
+      author={Tsun-Hin Cheung and Kin-Man Lam},
+      year={2023},
+      eprint={2206.04832},
+      archivePrefix={arXiv},
+      primaryClass={cs.MM}
+}
+```
