@@ -19,7 +19,7 @@ from transformers import logging
 import warnings
 
 
-os.environ["CUDA_VISIBLE_DEVICES"]="1"
+os.environ["CUDA_VISIBLE_DEVICES"]="0"
 
 warnings.filterwarnings("ignore")
 
@@ -37,6 +37,8 @@ logging.set_verbosity_error()
 torch.cuda.empty_cache()
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+print(device)
 
 parser = argparse.ArgumentParser(
     description='Multimodal Graph Rumor Detection and Verification (baseline)')
@@ -127,9 +129,10 @@ def eval():
 
         labels = torch.cat([data.y for data in batch]).to(device).long()
 
-        with torch.no_grad():
+        with torch.cuda.amp.autocast():
+            with torch.no_grad():
 
-            outputs = model(batch)
+                outputs = model(batch)
 
         _, source_pred = torch.max(outputs[0], 1)
         _, graph_pred = torch.max(outputs[1], 1)
